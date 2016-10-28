@@ -13,3 +13,5 @@
 ## Configure
 
 ## Run
+* in directory with gulpfile.js execute: gulp default server start on 3000+ port
+* or open in browser index.html (without gulp)

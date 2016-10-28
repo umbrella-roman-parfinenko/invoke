@@ -62,10 +62,13 @@ gulp.task('clean', function() {
 gulp.task('build', ['scripts'], function() {
 
     var buildCss = gulp.src([
-        'app/css/main.css',
+        'app/css/app.css',
         'app/css/libs.min.css'
     ])
         .pipe(gulp.dest('dist/css'));
+
+    var buildRoute = gulp.src('app/invoke/**/*')
+        .pipe(gulp.dest('dist/invoke'));
 
     var buildJs = gulp.src('app/js/**/*')
         .pipe(gulp.dest('dist/js'));
