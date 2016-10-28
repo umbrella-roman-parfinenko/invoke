@@ -4,8 +4,8 @@
 ## Install
 * Download the zip archive from https://github.com/umbrella-ilia-yurin/invoke/tree/develop
 
+* install nodejs & npm
 * sudo npm install -g gulp
-* nodejs & npm
 * npm install -g bower
 
 ## Configure
