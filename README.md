@@ -7,6 +7,8 @@
 * install nodejs & npm
 * sudo npm install -g gulp
 * npm install -g bower
+* in directory with package.json execute command: npm install
+* in directory with bower.json (/app) execute command: bower install
 
 ## Configure
 
