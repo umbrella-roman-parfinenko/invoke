@@ -1,0 +1,50 @@
+<div class="container" lazy-load>
+
+    <div class="inboxdate">Today</div>
+
+    <div ng-repeat="oLetter in aLetters" class="panel panel-default">
+        <div class="clickable panel-heading" letter-toggle>
+            <div class="row">
+                <div class="col-lg-1"><img class="img-round" src="{{oLetter.img}}"></div>
+                <div class="col-lg-4 subject"><label class="clickable text-left">{{oLetter.subject}}</label></div>
+                <div class="col-lg-7 preview text-left">{{oLetter.text}}</div>
+            </div>
+        </div>
+
+        <div class="panel-body" hidden>
+            {{oLetter.text}}
+        </div>
+    </div>
+
+    <div class="inboxdate">Yesterday</div>
+    <div ng-repeat="oLetter in aLetters" class="panel panel-default">
+        <div class="clickable panel-heading" letter-toggle>
+            <div class="row">
+                <div class="col-lg-1"><img class="img-round" src="{{oLetter.img}}"></div>
+                <div class="col-lg-4 subject"><label class="clickable text-left">{{oLetter.subject}}</label></div>
+                <div class="col-lg-7 preview text-left">{{oLetter.text}}</div>
+            </div>
+        </div>
+
+        <div class="panel-body" hidden>
+            {{oLetter.text}}
+        </div>
+    </div>
+
+    <div class="inboxdate">This week</div>
+
+    <div ng-repeat="oWeekLetter in aWeekLetters" class="panel panel-default">
+        <div class="clickable panel-heading" letter-toggle>
+            <div class="row">
+                <div class="col-lg-1"><img class="img-round" src="{{oWeekLetter.img}}"></div>
+                <div class="col-lg-4 subject"><label class="clickable text-left">{{oWeekLetter.subject}}</label></div>
+                <div class="col-lg-7 preview text-left">{{oWeekLetter.text}}</div>
+            </div>
+        </div>
+
+        <div class="panel-body" hidden>
+            {{oWeekLetter.text}}
+        </div>
+    </div>
+</div>
+

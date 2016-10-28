@@ -1,0 +1,17 @@
+{
+  "name": "invoke",
+  "description": "Test angularjs inbox application",
+  "main": "index.js",
+  "authors": [
+    "iYurin"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

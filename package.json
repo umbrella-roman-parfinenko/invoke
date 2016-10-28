@@ -1,0 +1,29 @@
+{
+  "name": "invoke",
+  "version": "1.0.0",
+  "description": "Test angularjs inbox application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umbrella-ilia-yurin/invoke.git"
+  },
+  "author": "iYurin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umbrella-ilia-yurin/invoke/issues"
+  },
+  "homepage": "https://github.com/umbrella-ilia-yurin/invoke#readme",
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglifyjs": "^0.6.2"
+  }
+}

@@ -1,0 +1,78 @@
+/* app css stylesheet */
+body {
+  padding-top: 70px;
+  background-color: #e7e7e7;
+}
+
+.navbar-default {
+  background-color: #5677fc;
+  border-color: #204d74;
+}
+
+.inboxdate{
+  padding-bottom: 10px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li + li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+.img-round {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  border: 1px solid #555555;
+  box-shadow: 0 0 7px #666;
+}
+.subject{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 5px;
+  padding-top: 12px;
+}
+.avatar{
+  width: 10%;
+}
+.preview{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 5px;
+  padding-top: 12px;
+}
+
+/*clickable elements*/
+.clickable{
+  cursor: pointer;
+}
+
+.panel {
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  margin-bottom: 10px;
+}
