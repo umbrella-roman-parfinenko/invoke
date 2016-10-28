@@ -3,7 +3,7 @@
  */
 
 angular
-    .module("myApp.letter-toggle", [])
+    .module("dtvLetter-toggle", [])
 
     .directive("letterToggle", [
         function() {
@@ -13,6 +13,38 @@ angular
                     element.bind('click', function() {
                         element.closest("div").next().fadeToggle();
                         element.toggleClass("show");
+                    });
+                }
+            };
+        }])
+
+    .directive("messageToggle", [
+        function() {
+            return {
+                restrict: "A",
+                link: function(scope, element, attrs) {
+                    element.bind('click', function() {
+                        element.closest("div").next().fadeToggle();
+                        element.toggleClass("show");
+                    });
+                }
+            };
+        }])
+
+    .directive("threadToggle", [
+        function() {
+            return {
+                restrict: "A",
+                link: function(scope, element, attrs) {
+                    element.bind('click', function() {
+                        if(attrs.threadToggle){
+                            element.closest("div").next().fadeToggle();
+                            element.toggleClass("show");
+                        }
+                        else{
+                            element.closest("div").next().fadeToggle();
+                            element.toggleClass("show");
+                        }
                     });
                 }
             };

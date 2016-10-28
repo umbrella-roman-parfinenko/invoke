@@ -1,50 +1,121 @@
-<div class="container" lazy-load>
+<div class="container" lazy-load="listCtrl.fnMoreItems()">
 
     <div class="inboxdate">Today</div>
-
-    <div ng-repeat="oLetter in aLetters" class="panel panel-default">
+    <div ng-repeat-start="oLetter in listCtrl.aLetters" class="panel panel-default" thread-toggle="{{oLetter.thread}}">
         <div class="clickable panel-heading" letter-toggle>
             <div class="row">
                 <div class="col-lg-1"><img class="img-round" src="{{oLetter.img}}"></div>
                 <div class="col-lg-4 subject"><label class="clickable text-left">{{oLetter.subject}}</label></div>
-                <div class="col-lg-7 preview text-left">{{oLetter.text}}</div>
+                <div ng-if="oLetter.text" class="col-lg-7 preview text-left">{{oLetter.text}}</div>
             </div>
         </div>
-
-        <div class="panel-body" hidden>
+        <div class="panel-body" ng-if="oLetter.text" hidden>
             {{oLetter.text}}
         </div>
     </div>
 
+    <div class="thread"
+         hidden
+         ng-init="listCtrl.fnGetThread(oLetter.thread)"
+         ng-repeat-end>
+        <div class="panel panel-default"
+             ng-repeat="oMessage in listCtrl.aItemsThread[oLetter.thread]">
+            <div class="clickable panel-heading" message-toggle="true">
+                <div class="row">
+                    <div class="col-lg-1"><img class="img-round" src="{{oMessage.img}}"></div>
+                    <div class="col-lg-4 sender"><label class="clickable text-left">{{oMessage.sender}}</label>
+                    </div>
+                    <div class="col-lg-11 preview text-left">{{oMessage.text}}</div>
+                </div>
+            </div>
+            <div class="panel-body" hidden message-toggle="false">
+                <div class="row">
+                    <div class="col-lg-1"><img class="img-round" src="{{oMessage.img}}"></div>
+                    <div class="col-lg-4 sender"><label class="clickable text-left">{{oMessage.sender}}</label>
+                    </div>
+                    <div class="col-lg-12">{{oMessage.text}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="inboxdate">Yesterday</div>
-    <div ng-repeat="oLetter in aLetters" class="panel panel-default">
+    <div ng-repeat-start="oLetter in listCtrl.aLetters" class="panel panel-default" thread-toggle="{{oLetter.thread}}">
         <div class="clickable panel-heading" letter-toggle>
             <div class="row">
                 <div class="col-lg-1"><img class="img-round" src="{{oLetter.img}}"></div>
                 <div class="col-lg-4 subject"><label class="clickable text-left">{{oLetter.subject}}</label></div>
-                <div class="col-lg-7 preview text-left">{{oLetter.text}}</div>
+                <div ng-if="oLetter.text" class="col-lg-7 preview text-left">{{oLetter.text}}</div>
             </div>
         </div>
-
-        <div class="panel-body" hidden>
+        <div class="panel-body" ng-if="oLetter.text" hidden>
             {{oLetter.text}}
+        </div>
+    </div>
+
+    <div class="thread"
+         hidden
+         ng-init="listCtrl.fnGetThread(oLetter.thread)"
+         ng-repeat-end>
+        <div class="panel panel-default"
+             ng-repeat="oMessage in listCtrl.aItemsThread[oLetter.thread]">
+            <div class="clickable panel-heading" message-toggle="true">
+                <div class="row">
+                    <div class="col-lg-1"><img class="img-round" src="{{oMessage.img}}"></div>
+                    <div class="col-lg-4 sender"><label class="clickable text-left">{{oMessage.sender}}</label>
+                    </div>
+                    <div class="col-lg-11 preview text-left">{{oMessage.text}}</div>
+                </div>
+            </div>
+            <div class="panel-body" hidden message-toggle="false">
+                <div class="row">
+                    <div class="col-lg-1"><img class="img-round" src="{{oMessage.img}}"></div>
+                    <div class="col-lg-4 sender"><label class="clickable text-left">{{oMessage.sender}}</label>
+                    </div>
+                    <div class="col-lg-12">{{oMessage.text}}</div>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="inboxdate">This week</div>
 
-    <div ng-repeat="oWeekLetter in aWeekLetters" class="panel panel-default">
-        <div class="clickable panel-heading" letter-toggle>
-            <div class="row">
-                <div class="col-lg-1"><img class="img-round" src="{{oWeekLetter.img}}"></div>
-                <div class="col-lg-4 subject"><label class="clickable text-left">{{oWeekLetter.subject}}</label></div>
-                <div class="col-lg-7 preview text-left">{{oWeekLetter.text}}</div>
+        <div ng-repeat-start="oLetter in listCtrl.aWeekLetters" class="panel panel-default" thread-toggle="{{oLetter.thread}}">
+            <div class="clickable panel-heading" letter-toggle>
+                <div class="row">
+                    <div class="col-lg-1"><img class="img-round" src="{{oLetter.img}}"></div>
+                    <div class="col-lg-4 subject"><label class="clickable text-left">{{oLetter.subject}}</label></div>
+                    <div ng-if="oLetter.text" class="col-lg-7 preview text-left">{{oLetter.text}}</div>
+                </div>
+            </div>
+            <div class="panel-body" ng-if="oLetter.text" hidden>
+                {{oLetter.text}}
             </div>
         </div>
 
-        <div class="panel-body" hidden>
-            {{oWeekLetter.text}}
+        <div class="thread"
+             hidden
+             ng-init="listCtrl.fnGetThread(oLetter.thread)"
+             ng-repeat-end>
+            <div class="panel panel-default"
+                 ng-repeat="oMessage in listCtrl.aItemsThread[oLetter.thread]">
+                <div class="clickable panel-heading" message-toggle="true">
+                    <div class="row">
+                        <div class="col-lg-1"><img class="img-round" src="{{oMessage.img}}"></div>
+                        <div class="col-lg-4 sender"><label class="clickable text-left">{{oMessage.sender}}</label>
+                        </div>
+                        <div class="col-lg-11 preview text-left">{{oMessage.text}}</div>
+                    </div>
+                </div>
+                <div class="panel-body" hidden message-toggle="false">
+                    <div class="row">
+                        <div class="col-lg-1"><img class="img-round" src="{{oMessage.img}}"></div>
+                        <div class="col-lg-4 sender"><label class="clickable text-left">{{oMessage.sender}}</label>
+                        </div>
+                        <div class="col-lg-12">{{oMessage.text}}</div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
 </div>
 

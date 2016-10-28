@@ -2,9 +2,9 @@
 - - -
 
 ## Install
-* npm install -g n
+* sudo npm install -g gulp
 * nodejs & npm
-* $ npm install -g bower
+* npm install -g bower
 
 ## Configure
 

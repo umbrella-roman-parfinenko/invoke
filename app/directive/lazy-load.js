@@ -4,7 +4,7 @@
 
 
 angular
-    .module("myApp.lazy-load", [])
+    .module("dtvLazy-load", [])
     .directive("lazyLoad", [
         "$window",
         function($window) {
@@ -12,8 +12,9 @@ angular
                 restrict: "A",
                 link: function(scope, element, attrs) {
                     angular.element($window).bind('scroll', function() {
-                        if ((element.prop('scrollHeight')-50) < (angular.element($window).scrollTop() + angular.element($window).height())) {
-                            scope.fnMoreItems();
+                        if ((element.prop('scrollHeight')-10) < (angular.element($window).scrollTop() + angular.element($window).height())) {
+                            scope.loading = true;
+                            scope.$apply(attrs.lazyLoad);
                         }
                     });
                 }

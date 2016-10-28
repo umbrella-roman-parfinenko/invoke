@@ -27,14 +27,14 @@
             <a>MENU</a>
           </li>
           <li>
-            <a class="navbar-brand" href="#/inbox">Angular Inbox</a>
+            <a class="navbar-brand" href="#/inbox/list">Angular Inbox</a>
           </li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
 
-  <div ng-view></div>
+  <div ui-view></div>
 
 </div>
   <!-- In production use:
@@ -43,9 +43,12 @@
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="https://apis.google.com/js/platform.js"></script>
   <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
+  <script src="bower_components/lodash/dist/lodash.min.js"></script>
+  <script src="bower_components/angular-google-gapi/dist/angular-google-gapi.min.js"></script>
+<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
   <script src="config.js"></script>
   <script src="directive/panel-toggle.js"></script>
   <script src="directive/lazy-load.js"></script>
