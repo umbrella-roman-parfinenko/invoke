@@ -10,8 +10,6 @@
 * in directory with package.json execute command: "npm install"
 * in directory with bower.json (/app) execute command: "bower install"
 
-## Configure
-
 ## Run
 * in directory with gulpfile.js execute: "gulp default" , server start on 3000+ port
 * or open in browser index.html (without gulp)
